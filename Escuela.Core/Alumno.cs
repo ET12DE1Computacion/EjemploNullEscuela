@@ -1,10 +1,26 @@
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 namespace Escuela.Core;
+
+[Table("Alumno")]
 public class Alumno
 {
+    [Column("nombre")]
+    [MaxLength(30)]
     public string Nombre { get; set; }
+
+    [Column("apellido")]
+    [MaxLength(30)]
     public string Apellido { get; set; }
+    
+    [Column("dni")]
+    [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.None)]
     public uint Dni { get; set; }
+
     public Curso? Curso { get; set; }
+
+    [NotMapped]
     public List<Falta> Faltas { get; set; }
 
     public Alumno(string nombre, string apellido, uint dni)

@@ -6,6 +6,7 @@ public class Curso
 
     //Definición clasica de atributo
     private byte anio;
+    public byte IdCurso { get; set; }
 
     //Propiedad que usa para encapsular el atributo y verificar las asignaciones
     public byte Anio

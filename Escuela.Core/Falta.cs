@@ -3,14 +3,14 @@ public class Falta
 {
     public Alumno Alumno { get; set; }
     public Curso Curso { get; set; }
-    public DateOnly Fecha { get; set; }
+    public DateOnly Fecha { get; init; }
     private static DateOnly Hoy 
         => DateOnly.FromDateTime(DateTime.Today);
-    public Falta(Alumno alumno, Curso curso)
+    public Falta(Alumno alumno, Curso curso, DateOnly? fecha = null)
     {
         Alumno = alumno;
         Curso = curso;
-        Fecha = Hoy;
+        Fecha = fecha ?? Hoy;
     }
 
     public bool EsDeHoy => Fecha.Equals(Hoy);

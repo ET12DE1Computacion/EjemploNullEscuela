@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Escuela.Core", "Escuela.Core\Escuela.Core.csproj", "{EE55EE3D-6EA6-4A37-86C8-A9F6F1945C2F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Escuela.DAL.Efc6", "Escuela.DAL.Efc6\Escuela.DAL.Efc6.csproj", "{7D9DD06B-3C8B-4C6B-AEA0-549D65E4B649}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{EE55EE3D-6EA6-4A37-86C8-A9F6F1945C2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE55EE3D-6EA6-4A37-86C8-A9F6F1945C2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE55EE3D-6EA6-4A37-86C8-A9F6F1945C2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D9DD06B-3C8B-4C6B-AEA0-549D65E4B649}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D9DD06B-3C8B-4C6B-AEA0-549D65E4B649}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D9DD06B-3C8B-4C6B-AEA0-549D65E4B649}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D9DD06B-3C8B-4C6B-AEA0-549D65E4B649}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
