@@ -1,35 +1,39 @@
 using Escuela.Core;
 using Escuela.DAL.Efc6.Mapeos;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 namespace Escuela.DAL.Efc6
 {
     public class Contexto : DbContext
     {
 
-        public DbSet<Curso> Cursos { get; set; } = null!;
-        public DbSet<Alumno> Alumnos { get; set; } = null!;
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public DbSet<Curso> Cursos => Set<Curso>();
+        public DbSet<Alumno> Alumnos => Set<Alumno>();
+        public DbSet<Falta> Faltas => Set<Falta>();
+        public DbSet<FaltaPasada> FaltasPasadas => Set<FaltaPasada>();
+        protected override void OnConfiguring(DbContextOptionsBuilder ob)
         {
-            var serverVersion = new MySqlServerVersion(new Version(8, 0, 28));
+            if (!ob.IsConfigured)
+        {
+            IConfiguration myConfig = new ConfigurationBuilder()
+                .SetBasePath(Environment.CurrentDirectory)
+                .AddJsonFile("appSettings.json")
+                .Build();
 
-            optionsBuilder.UseMySql("server=localhost;port=3306;user=root;password=root;database=efc6", serverVersion);
+            string strConexion = myConfig.GetConnectionString("dev");
+            var serverVersion = new MySqlServerVersion(versionString: myConfig["SerVersion"]);
+            ob.UseMySql(strConexion, serverVersion);
+        }
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            
 
-            // modelBuilder.Entity<Curso>(curso =>
-            // {
-            //     curso.HasKey(e => e.IdCurso);
-            //     curso.Ignore(c => c.Alumnos);
-            //     curso.Ignore(c => c.CantidadAlumnos);
-            //     curso.Property(c => c.Turno).HasMaxLength(12);
-            //     curso.HasIndex(c => new { c.Anio, c.Division }).IsUnique();
-
-            // });
             new MapCurso().Configure(modelBuilder.Entity<Curso>());
+            new MapAlumno().Configure(modelBuilder.Entity<Alumno>());
+            new MapFalta().Configure(modelBuilder.Entity<Falta>());
+            new MapFaltaPasada().Configure(modelBuilder.Entity<FaltaPasada>());
         }
     }
 }

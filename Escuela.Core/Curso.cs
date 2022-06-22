@@ -4,6 +4,8 @@ public class Curso
     //Atributo de clase, se comparte para todas las instancias
     private static byte _cantidadMaxima = 30;
 
+    public List<FaltaPasada> FaltasPasadas { get; set; }
+
     //Definición clasica de atributo
     private byte anio;
     public byte IdCurso { get; set; }
@@ -22,7 +24,6 @@ public class Curso
             anio = value;
         }
     }
-
     public byte Division { get; set; }
     public string Turno { get; set; }
     public List<Alumno> Alumnos { get; set; }
@@ -32,7 +33,8 @@ public class Curso
         Anio = anio;
         Division = division;
         Turno = turno;
-        Alumnos = new List<Alumno>();
+        Alumnos = new();
+        FaltasPasadas = new();
     }
 
     public void AgregarAlumno(Alumno alumno)
@@ -49,4 +51,13 @@ public class Curso
 
     public int CantidadAlumnos => Alumnos.Count;
     public override string ToString() => $"{anio}° - {CantidadAlumnos} alumnos";
+    public void PasarFalta(DateOnly fecha)
+    {
+        if (FaltasPasadas.Exists(fp => fp.EsFecha(fecha)))
+            throw new InvalidOperationException("Ya existe una falta para esa fecha");
+
+        FaltasPasadas.Add(new FaltaPasada(this, fecha));
+    }
+
+    public void PasarFalta() => PasarFalta(Falta.Hoy);
 }

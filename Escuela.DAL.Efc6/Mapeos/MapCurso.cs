@@ -15,10 +15,10 @@ public class MapCurso : IEntityTypeConfiguration<Curso>
         builder.HasIndex(c => new { c.Anio, c.Division })
                 .IsUnique()
                 .HasDatabaseName("UQ_Curso_anio_division");
-        
-        builder.Property(c=>c.IdCurso)
+
+        builder.Property(c => c.IdCurso)
                 .HasColumnName("idCurso");
         builder.Property(c => c.Turno).HasMaxLength(12);
-        builder.Ignore(c=>c.CantidadAlumnos);
+        builder.Ignore(c => c.CantidadAlumnos);
     }
 }

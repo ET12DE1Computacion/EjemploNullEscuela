@@ -19,8 +19,6 @@ public class Alumno
     public uint Dni { get; set; }
 
     public Curso? Curso { get; set; }
-
-    [NotMapped]
     public List<Falta> Faltas { get; set; }
 
     public Alumno(string nombre, string apellido, uint dni)
