@@ -1,7 +1,7 @@
 <!-- Completa abajo cambiando ET12DE1Computacion a tu user|organización y template a tu repo, te recomiendo usar el Find & Replace de tu editor -->
-![main build.NET6](https://github.com/ET12DE1Computacion/simpleTemplateCSharp/workflows/main-build.NET6/badge.svg?branch=main) ![main test.NET6](https://github.com/ET12DE1Computacion/simpleTemplateCSharp/workflows/main-test.NET6/badge.svg?branch=main)
-![dev build.NET6](https://github.com/ET12DE1Computacion/simpleTemplateCSharp/workflows/dev-build.NET6/badge.svg?branch=dev) ![dev test.NET6](https://github.com/ET12DE1Computacion/simpleTemplateCSharp/workflows/dev-test.NET6/badge.svg?branch=dev)
-[![Abrir en Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Abrir%20en%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/ET12DE1Computacion/simpleTemplateCSharp)
+![main build.NET6](https://github.com/ET12DE1Computacion/EjemploNullEscuela/workflows/main-build.NET6/badge.svg?branch=main) ![main test.NET6](https://github.com/ET12DE1Computacion/EjemploNullEscuela/workflows/main-test.NET6/badge.svg?branch=main)
+![dev build.NET6](https://github.com/ET12DE1Computacion/EjemploNullEscuela/workflows/dev-build.NET6/badge.svg?branch=dev) ![dev test.NET6](https://github.com/ET12DE1Computacion/EjemploNullEscuela/workflows/dev-test.NET6/badge.svg?branch=dev)
+[![Abrir en Visual Studio Code](https://img.shields.io/static/v1?logo=visualstudiocode&label=&message=Abrir%20en%20Visual%20Studio%20Code&labelColor=2c2c32&color=007acc&logoColor=007acc)](https://open.vscode.dev/ET12DE1Computacion/EjemploNullEscuela)
 <!-- Borra este comentario y linea después haber cambiado arriba las ocurrencias de tu usuario/repo -->
 
 <h1 align="center">E.T. Nº12 D.E. 1º "Libertador Gral. José de San Martín"</h1>
@@ -11,24 +11,16 @@
 
 ## Computación 2022
 
-**Asignatura**: <!-- REEMPLAZA este comentario por el nombre de la asignatura -->
+# Modelado Escuela
 
-**Nombre TP**: <!-- REEMPLAZA este comentario por el nombre del TP -->
-
-**Apellido y nombre Alumno**: <!-- REEMPLAZA este comentario por tu apellido y nombre -->
-
-**Curso**: <!-- REEMPLAZA este comentario por tu curso -->
-
-# Título del Proyecto
-
-_Acá va un párrafo que describa lo que es el proyecto._
+Proyecto de Modelado de escuela con faltas para repaso de POO y excepciones.
 
 ## Comenzando 🚀
 
 Clonar el repositorio github, desde Github Desktop o ejecutar en la terminal o CMD:
 <!-- cambia el link de abajo al de tu repositorio y BORRA ESTE COMENTARIO -->
 ```
-git clone https://github.com/ET12DE1Computacion/simpleTemplateCSharp
+git clone https://github.com/ET12DE1Computacion/EjemploNullEscuela
 ```
 
 ### Pre-requisitos 📋
@@ -47,14 +39,13 @@ _Menciona las herramientas y versiones que utilizaste para crear tu proyecto_
 
 ## Versionado 📌
 
-Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/ET12DE1Computacion/simpleTemplateCSharp/tags).
+Usamos [SemVer](http://semver.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/ET12DE1Computacion/EjemploNullEscuela/tags).
 
 ## Autores ✒️
 
 _Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
 
-* **Max Power** - *Desarrollo* - [Maxpower](https://github.com/maxpower)
-* **Cosme Fulanito** - *Documentación* - [Cosmefulanito](#Cosmefulanito)
+* **Luis Duran** - *Desarrollo* - [Maxpower](https://github.com/luchoxx87)
 
 ## Licencia 📄
 
